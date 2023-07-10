@@ -8,7 +8,7 @@
     <title>Resume Generator</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="cv-form">
     <h1 class="text-center my-2 ">Resume Generator</h1>
     <P class="text-center">By CodeWithAnkita</P>
     <div class="row">
@@ -24,27 +24,27 @@
              </div>
              <div class="form-group mt-2">
                 <label for="addressFeild">Your Address</label>
-                <textarea  rows="5" id="addressFeild" placeholder="Enter Your Address" class="form-control"></textarea>
+                <textarea  rows="5" id="addressField" placeholder="Enter Your Address" class="form-control"></textarea>
              </div>
              <p class="text-secondary my-3">Important Links</p>
              <div class="form-group mt-2">
                 <label for="fbFeild">Facebook</label>
-                <input type="text" id="fbFeild" placeholder="Enter Here" class="form-control">
+                <input type="text" id="fbField" placeholder="Enter Here" class="form-control">
              </div>
              <div class="form-group mt-2">
                 <label for="instaFeild">Instagram</label>
-                <input type="text" id="contact" placeholder="Enter Here" class="form-control">
+                <input type="text" id="instaField" placeholder="Enter Here" class="form-control">
              </div>
              <div class="form-group mt-2">
                 <label for="linkedinFeild">Linkedin</label>
-                <input type="text" id="contact" placeholder="Enter Here" class="form-control">
+                <input type="text" id="linkedinField" placeholder="Enter Here" class="form-control">
              </div>
         </div>
         <div class="col-md-6">
             <h3>Professional Information</h3>
             <div class="form-group mt-2">
                 <label for="">Objective</label>
-                <textarea rows="5"  placeholder="Enter Your Address" class="form-control"></textarea>
+                <textarea  id="objField" rows="5"  placeholder="Enter Your Address" class="form-control"></textarea>
              </div>
              <div class="form-group mt-2" id="we">
                 <label for="">Work Experience</label>
@@ -72,9 +72,82 @@
         </div>
     </div>
     <div class="container text-center mt-3">
-      <button class="btn btn-primary btn-lg">Generate CV</button>
+      <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
     </div>
     </div>
+
+    <!----cv template---->
+
+    <div class="container" id="cv-template">
+          <div class="row">
+            <div class="col-md-4 text-center background py-5">
+               <img src="./profile.png"
+               alt="" class="img-fluid myimg"/>
+               <div class="container ">
+                  <p id="nameT1">Ankita Patil</p>
+                  <p id="contactT">+917879676732</p>
+                  <p id="addressT">Sector 234 Noida/India</p>
+                  <hr/>
+                  <p><a id="fbT" href="#1">https://www.facebook.com</a></p>
+                  <p><a id="instaT" href="#1">https://www.instagram.com</a></p>
+                  <p><a id="linkedT" href="#1">https://www.linkedin.com</a></p>
+               </div>
+            </div>
+            
+            <div class="col-md-8 py-5" >
+                 <!---Second col-->
+                 <h1 id="nameT2" class="text-center" style="font-weight: 980;">Ankita Patil</h1>
+                  <div class="card mt-4">
+                     <div class="card-header background">
+                        <h3>Objective</h3>
+                     </div>
+                     <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum dolor sit amet 
+                           consectetur adipisicing elit. 
+                           Porro itaque repudiandae voluptate 
+                           suscipit nesciunt? Necessitatibus 
+                           officia voluptatum corporis consectetur et eligendi voluptas, nisi assumenda esse praesentium, dignissimos, amet labore. Ipsa at velit a nulla ratione? Voluptatibus, corrupti ipsam illo sunt exercitationem laboriosam fuga illum, minima ullam numquam ratione quia. Inventore.</p>
+                        </div>
+                  </div>
+                  <div class="card mt-4">
+                     <div class="card-header background">
+                        <h3>Work Experience</h3>
+                     </div>
+                     <div class="card-body">
+                        <ul id="weT">
+                           <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, labore?
+                           </li>
+                           <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, labore?
+                           </li>
+                           <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, labore?
+                           </li>
+                        </ul>
+                  </div>
+            </div>
+            <div class="card mt-4">
+               <div class="card-header background">
+                  <h3>Acadamic Qualification</h3>
+               </div>
+               <div class="card-body">
+                  <ul id="aqT">
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, labore?
+                     </li>
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, labore?
+                     </li>
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, labore?
+                     </li>
+                  </ul>
+               </div>
+          </div>
+          <div class="container mt-3 text-center">
+            <button onclick="printCV()" class="btn background">
+               Print CV
+            </button>
+          </div>
+
+          </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
